@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# tooling / local artifacts
+.playwright-mcp/
+node_modules/
+*.log
+*.ps1
+
+# The raw scrape lives in ../extract and is intentionally NOT in this repo.

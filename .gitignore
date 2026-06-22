@@ -11,5 +11,6 @@ node_modules/
 
 # internal working notes, keep out of the public Pages repo
 CLAUDE.md
+README.md
 
 # The raw scrape lives in ../extract and is intentionally NOT in this repo.

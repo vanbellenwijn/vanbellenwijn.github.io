@@ -1,4 +1,4 @@
-// Van Bellen Wijn, staging rebuild
+// Van Bellen Wijn
 (function(){
   // mobile nav toggle
   var t = document.querySelector('.nav-toggle');
@@ -12,14 +12,33 @@
       if (e.target.tagName === 'A') links.classList.remove('open');
     });
   }
-  // demo contact form (no backend on staging)
-  var form = document.querySelector('form[data-demo]');
+  // contact form: build a mailto: link from the inputs (no backend)
+  var form = document.querySelector('form[data-mailto]');
   if (form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      var val = function(name){ var el = form.elements[name]; return el ? el.value.trim() : ''; };
+      var naam = val('naam');
+      var email = val('email');
+      var tel = val('tel');
+      var onderwerp = val('onderwerp');
+      var bericht = val('bericht');
+      var subject = onderwerp ? 'Vraag over ' + onderwerp : 'Bericht via de website';
+      var body =
+        'Beste Van Bellen Wijn,\n\n' +
+        'Ik had een vraag over \'' + onderwerp + '\'.\n\n' +
+        bericht + '\n\n' +
+        'Met vriendelijke groet,\n' +
+        naam +
+        (email ? '\n' + email : '') +
+        (tel ? '\n' + tel : '') +
+        '\n';
+      var href = 'mailto:Info@vanbellenwijn.nl'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
       var ok = form.querySelector('.form-msg');
       if (ok){ ok.hidden = false; ok.scrollIntoView({behavior:'smooth', block:'center'}); }
-      form.reset();
+      window.location.href = href;
     });
   }
 })();

@@ -1,4 +1,4 @@
-/* Van Bellen Wijn, staging rebuild.
+/* Van Bellen Wijn.
    Modernized identity: warm Bordeaux + cream, serif display, personal feel. */
 
 :root{
@@ -70,12 +70,12 @@ p{margin:0 0 1.1em}
 
 /* ---------- header ---------- */
 .site-header{
-  position:sticky;top:0;z-index:50;background:rgba(248,242,233,.9);
+  position:sticky;top:0;z-index:50;background:rgba(248,242,233,.96);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px;max-width:1280px;margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 24px;max-width:1280px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink)}
-.brand img{height:46px;width:auto}
+.brand img{height:56px;width:auto;filter:drop-shadow(0 2px 6px rgba(36,15,18,.18))}
 .nav-links{display:flex;gap:6px;align-items:center;list-style:none;margin:0;padding:0}
 .nav-links a{
   font-size:.95rem;font-weight:500;color:var(--ink);padding:.5em .85em;border-radius:8px;transition:.18s;
@@ -118,7 +118,7 @@ p{margin:0 0 1.1em}
   box-shadow:var(--shadow-sm);transition:.25s ease;
 }
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.card .ic{font-size:2rem;margin-bottom:.4em}
+.card .ic{display:block;width:34px;height:34px;color:var(--gold);margin-bottom:.55em}
 .card h3{margin-bottom:.35em}
 .card p{color:var(--muted);margin-bottom:0}
 
@@ -138,7 +138,7 @@ p{margin:0 0 1.1em}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
 .info-list{list-style:none;padding:0;margin:0}
 .info-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-.info-list .ic{color:var(--gold);font-size:1.2rem;flex:0 0 auto;margin-top:2px}
+.info-list .ic{color:var(--gold);width:22px;height:22px;flex:0 0 auto;margin-top:2px}
 .info-list b{display:block;font-family:var(--serif);font-size:1.15rem}
 form .field{margin-bottom:18px}
 label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
@@ -164,7 +164,6 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--gold-soft);borde
 .socials a:hover{background:#fff;color:var(--wine-dark)}
 .socials svg{width:18px;height:18px}
 
-.staging-banner{background:var(--gold);color:#3a2a10;text-align:center;font-size:.82rem;font-weight:600;padding:7px 16px;letter-spacing:.02em}
 
 /* ---------- responsive ---------- */
 @media(max-width:880px){

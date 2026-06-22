@@ -1,3 +1,2 @@
-# Staging-versie, niet indexeren.
 User-agent: *
-Disallow: /
+Disallow:
